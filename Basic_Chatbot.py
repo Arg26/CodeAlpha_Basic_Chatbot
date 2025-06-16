@@ -1,8 +1,8 @@
 import datetime
 
-# Define predefined responses
+# Define predefined responses 
 responses = {
-    # Greetings
+    # Say hello
     "hello": "Hi there! How can I help you today?",
     "hi": "Hello! Ask me anything.",
     "how are you": "I'm just a program, but I'm doing fine. Thanks!",
@@ -25,7 +25,7 @@ responses = {
     "how old are you": "I'm as old as the last time the code was updated!",
     "do you sleep": "Nope, I’m always running... unless you close me!",
 
-    # Fun
+    # Have fun
     "tell me a joke": "Why did the programmer quit his job? Because he didn't get arrays!",
     "joke": "Why do Python programmers wear glasses? Because they can't C!",
     "bored": "Let's play a game! Ask me a riddle or type 'joke'!",
@@ -37,10 +37,10 @@ responses = {
     "how do you feel": "I feel... electrically optimistic!",
 }
 
-# Keep track of the conversation
+# Record the conversation
 conversation_history = []
 
-# Function to get response based on input
+# Use input to get a response
 def get_response(user_input):
     user_input = user_input.lower()
     for key in responses:
@@ -48,7 +48,7 @@ def get_response(user_input):
             return responses[key]
     return "I'm not sure how to respond to that. Try asking something else or type 'help'."
 
-# Function to save the conversation to a file
+# Save the conversation to a file
 def save_conversation(history, filename="chat_log.txt"):
     with open(filename, "w") as file:
         file.write("=== ChatBot Conversation Log ===\n")
@@ -56,7 +56,7 @@ def save_conversation(history, filename="chat_log.txt"):
             file.write(entry + "\n")
     print(f"Conversation saved to '{filename}'.")
 
-# Main chatbot loop
+# Primary chatbot loop
 def run_chatbot():
     print("👋 Welcome to PyBot! Type 'exit' to quit.")
     while True:
@@ -80,6 +80,7 @@ def run_chatbot():
     if save_option in ['yes', 'y']:
         save_conversation(conversation_history)
 
-# Start chatbot
+
+# Launch the chatbot
 if __name__ == "__main__":
     run_chatbot()
