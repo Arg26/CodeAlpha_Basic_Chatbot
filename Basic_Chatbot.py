@@ -2,15 +2,39 @@ import datetime
 
 # Define predefined responses
 responses = {
+    # Greetings
     "hello": "Hi there! How can I help you today?",
     "hi": "Hello! Ask me anything.",
     "how are you": "I'm just a program, but I'm doing fine. Thanks!",
-    "what's your name": "I'm PyBot, your friendly chatbot assistant.",
     "bye": "Goodbye! Have a great day.",
     "thank you": "You're welcome!",
-    "help": "I can respond to greetings, questions, and simple keywords like 'time', 'date', 'bye', etc.",
+    
+    # Time/date
     "time": f"The current time is {datetime.datetime.now().strftime('%H:%M:%S')}",
-    "date": f"Today's date is {datetime.datetime.now().strftime('%Y-%m-%d')}"
+    "date": f"Today's date is {datetime.datetime.now().strftime('%Y-%m-%d')}",
+    
+    # Help/what it does
+    "help": "I can respond to greetings, jokes, time, date, weather, and other simple keywords.",
+    "what can you do": "I can chat with you, tell jokes, remember our conversation, and more!",
+
+    # Identity
+    "what's your name": "I'm PyBot, your friendly chatbot assistant.",
+    "who are you": "I'm PyBot, your virtual assistant powered by Python.",
+    "are you a robot": "Sort of! I'm a chatbot built with code, not circuits.",
+    "who created you": "I was created by a Python programmer like you!",
+    "how old are you": "I'm as old as the last time the code was updated!",
+    "do you sleep": "Nope, I’m always running... unless you close me!",
+
+    # Fun
+    "tell me a joke": "Why did the programmer quit his job? Because he didn't get arrays!",
+    "joke": "Why do Python programmers wear glasses? Because they can't C!",
+    "bored": "Let's play a game! Ask me a riddle or type 'joke'!",
+    "sing": "I'm better with code than chords, but here's one: ♪ beep boop beep ♪",
+
+    # Weather
+    "weather": "I'm not connected to live weather APIs yet, but I hope it's sunny where you are!",
+    "how's the weather": "Cloudy with a chance of code!",
+    "how do you feel": "I feel... electrically optimistic!",
 }
 
 # Keep track of the conversation
